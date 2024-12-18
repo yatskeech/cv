@@ -1,5 +1,6 @@
 import Divider from "./components/Divider";
 import Header from "./components/Header";
+import Info from "./components/Info";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
             <div className="flex flex-col gap-8 p-8">
               <Header />
               <Divider />
-              
+              <Info />
+              <Divider />
             </div>
           </div>
           <div>content</div>
