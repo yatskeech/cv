@@ -1,3 +1,4 @@
+import Divider from "./components/Divider";
 import Header from "./components/Header";
 
 function App() {
@@ -6,8 +7,10 @@ function App() {
       <div className="container">
         <div className="flex gap-4 text-white">
           <div className="w-[360px] min-h-screen bg-primary-darkest">
-            <div className="p-8">
+            <div className="flex flex-col gap-8 p-8">
               <Header />
+              <Divider />
+              
             </div>
           </div>
           <div>content</div>
