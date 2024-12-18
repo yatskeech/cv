@@ -2,7 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: "16px",
+    },
     colors: {
+      white: "#ffffff",
+      transparent: 'transparent',
+
       "primary-darkest": "#170F2E",
       "primary-darker": "#312163",
       "primary-dark": "#5531A7",

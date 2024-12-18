@@ -6,4 +6,31 @@
   body {
     font-family: "Outfit", sans-serif;
   }
+
+  .text-gradient-primary {
+    @apply text-transparent bg-gradient-to-r from-[#A478E8] to-[#516CF7] bg-clip-text;
+  }
+
+  .quote {
+    quotes: "\201C""\201D";
+    @apply px-8 relative;
+  }
+
+  .quote::before,
+  .quote::after {
+    position: absolute;
+    top: 0;
+    font-size: 36px;
+    @apply text-gray-default;
+  }
+
+  .quote::before {
+    content: open-quote;
+    left: 0;
+  }
+
+  .quote::after {
+    content: close-quote;
+    right: 0;
+  }
 }
