@@ -1,6 +1,7 @@
 import Divider from "./components/Divider";
 import Header from "./components/Header";
 import Info from "./components/Info";
+import Socials from "./components/Socials";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
               <Header />
               <Divider />
               <Info />
+              <Divider />
+              <Socials />
               <Divider />
             </div>
           </div>
