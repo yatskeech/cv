@@ -1,6 +1,7 @@
 import Divider from "./components/Divider";
 import Header from "./components/Header";
 import Info from "./components/Info";
+import Languages from "./components/Languages";
 import Socials from "./components/Socials";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
               <Divider />
               <Socials />
               <Divider />
+              <Languages />
             </div>
           </div>
           <div>content</div>
