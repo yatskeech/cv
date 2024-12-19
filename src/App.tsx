@@ -25,14 +25,14 @@ function App() {
             </div>
           </div>
           <div className="flex-grow px-12 py-8">
-            <Section title="Education" className="left-point left-line">
+            <Section title="Education" className="left-point left-line pb-8">
               <div className="grid grid-cols-2 gap-2 rounded-lg overflow-hidden">
                 {EDUCATION.map((education, index) => (
                   <Education key={index} education={education} />
                 ))}
               </div>
             </Section>
-            <Section title="Skills" className="left-point left-line">
+            <Section title="Skills" className="left-point left-line pb-8">
               <div className="flex gap-2 rounded-lg overflow-hidden">
                 {SKILLS.map((skills, index) => (
                   <Skill key={index} skills={skills} />

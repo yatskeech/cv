@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import clsx from "clsx";
 
 interface SectionProps {
   title: string;
@@ -9,7 +8,7 @@ interface SectionProps {
 
 function Section({ title, children, className }: SectionProps) {
   return (
-    <section className={clsx("pb-8", className)}>
+    <section className={className}>
       <div className="flex flex-col gap-4">
         <h1 className="text-2xl leading-none">{title}</h1>
         {children}
