@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Info from "./components/Info";
 import Languages from "./components/Languages";
 import Socials from "./components/Socials";
+import EducationItem, { EDUCATION } from "./components/EducationItem.tsx";
+import Section from "./components/Section.tsx";
 
 function App() {
   return (
@@ -20,7 +22,15 @@ function App() {
               <Languages />
             </div>
           </div>
-          <div>content</div>
+          <div className="flex-grow px-12 py-8">
+            <Section title="Education" className="left-point left-line">
+              <div className="grid grid-cols-2 gap-2 rounded-lg overflow-hidden">
+                {EDUCATION.map((education, index) => (
+                  <EducationItem key={index} education={education} />
+                ))}
+              </div>
+            </Section>
+          </div>
         </div>
       </div>
     </div>

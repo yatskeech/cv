@@ -12,7 +12,7 @@
   }
 
   .quote {
-    quotes: "\201C""\201D";
+    quotes: "\201C" "\201D";
     @apply px-8 relative;
   }
 
@@ -32,5 +32,42 @@
   .quote::after {
     content: close-quote;
     right: 0;
+  }
+
+  .left-line,
+  .left-point {
+    @apply pl-16 relative;
+  }
+
+  .left-line::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: -1px;
+    bottom: -16px;
+    width: 2px;
+    background: #232339;
+  }
+
+  @keyframes pulse-point {
+    50% {
+      background: #a478e8;
+      transform: scale(0.9);
+    }
+  }
+
+  .left-point::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 12px solid #232339;
+    background: #c696fc;
+    animation: pulse-point 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
