@@ -3,14 +3,14 @@ import RSSchool from "./icons/RSSchool.tsx";
 import PurpleSchool from "./icons/PurpleSchool.tsx";
 import BSU from "./icons/BSU.tsx";
 
-interface Education {
+interface EducationType {
   icon: ReactNode;
   company: string;
   title: string;
   date: string;
 }
 
-export const EDUCATION: Education[] = [
+export const EDUCATION: EducationType[] = [
   {
     icon: <RSSchool className="w-full h-full" />,
     company: "RS School",
@@ -43,7 +43,7 @@ export const EDUCATION: Education[] = [
   },
 ];
 
-function EducationItem({ education }: { education: Education }) {
+function Education({ education }: { education: EducationType }) {
   return (
     <div className="bg-gray-darkest p-4 flex flex-col gap-2">
       <div className="flex gap-4 items-center">
@@ -60,4 +60,4 @@ function EducationItem({ education }: { education: Education }) {
   );
 }
 
-export default EducationItem;
+export default Education;

@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Info from "./components/Info";
 import Languages from "./components/Languages";
 import Socials from "./components/Socials";
-import EducationItem, { EDUCATION } from "./components/EducationItem.tsx";
+import Education, { EDUCATION } from "./components/Education.tsx";
 import Section from "./components/Section.tsx";
 import Skill, { SKILLS } from "./components/Skill.tsx";
 
@@ -27,7 +27,7 @@ function App() {
             <Section title="Education" className="left-point left-line">
               <div className="grid grid-cols-2 gap-2 rounded-lg overflow-hidden">
                 {EDUCATION.map((education, index) => (
-                  <EducationItem key={index} education={education} />
+                  <Education key={index} education={education} />
                 ))}
               </div>
             </Section>
