@@ -20,19 +20,19 @@ export const EDUCATION: EducationType[] = [
   {
     icon: <PurpleSchool className="w-full h-full" />,
     company: "Purple School",
-    title: "JavaScript Advanced - продвинутые концепции языка и ООП",
+    title: "JavaScript Advanced - advanced language concepts and OOP",
     date: "January 2024 - May 2024",
   },
   {
     icon: <PurpleSchool className="w-full h-full" />,
     company: "Purple School",
-    title: "TypeScript с нуля - полный курс и паттерны проектирования",
+    title: "TypeScript from scratch - a complete course and design patterns",
     date: "May 2024 - June 2024",
   },
   {
     icon: <PurpleSchool className="w-full h-full" />,
     company: "Purple School",
-    title: "Основы React, React Router и Redux Toolkit",
+    title: "React Basics, React Router and Redux Toolkit",
     date: "June 2024 - September 2024",
   },
   {
