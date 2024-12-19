@@ -6,6 +6,7 @@ import Socials from "./components/Socials";
 import Education, { EDUCATION } from "./components/Education.tsx";
 import Section from "./components/Section.tsx";
 import Skill, { SKILLS } from "./components/Skill.tsx";
+import Project, { PROJECTS } from "./components/Project.tsx";
 
 function App() {
   return (
@@ -35,6 +36,13 @@ function App() {
               <div className="flex gap-2 rounded-lg overflow-hidden">
                 {SKILLS.map((skills, index) => (
                   <Skill key={index} skills={skills} />
+                ))}
+              </div>
+            </Section>
+            <Section title="Latest Projects" className="left-point">
+              <div className="grid grid-cols-2 gap-2 rounded-lg overflow-hidden">
+                {PROJECTS.map((project, index) => (
+                  <Project key={index} project={project} />
                 ))}
               </div>
             </Section>
