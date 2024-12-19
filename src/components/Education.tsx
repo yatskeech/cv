@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import RSSchool from "./icons/RSSchool.tsx";
 import PurpleSchool from "./icons/PurpleSchool.tsx";
 import BSU from "./icons/BSU.tsx";
+import Aroken from "./icons/Aroken.tsx";
 
 interface EducationType {
   icon: ReactNode;
@@ -11,6 +12,12 @@ interface EducationType {
 }
 
 export const EDUCATION: EducationType[] = [
+  {
+    icon: <Aroken className="w-full h-full" />,
+    company: "Aroken",
+    title: "Layout (HTML and CSS)",
+    date: "August 2023 - October 2024",
+  },
   {
     icon: <RSSchool className="w-full h-full" />,
     company: "RS School",
