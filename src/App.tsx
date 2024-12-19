@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="w-full min-h-screen bg-gray-darker">
       <div className="container">
-        <div className="flex gap-4 text-white">
-          <div className="w-[360px] min-h-screen bg-primary-darkest">
+        <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-4 text-white">
+          <div className="lg:min-w-[360px] min-h-screen bg-primary-darkest">
             <div className="flex flex-col gap-8 p-8">
               <Header />
               <Divider />
@@ -24,23 +24,26 @@ function App() {
               <Languages />
             </div>
           </div>
-          <div className="flex-grow px-12 py-8">
-            <Section title="Education" className="left-point left-line pb-8">
-              <div className="grid grid-cols-2 gap-2 rounded-lg overflow-hidden">
+          <div className="px-4 sm:px-12 py-8">
+            <Section
+              title="Education"
+              className="sm:left-point sm:left-line pb-8"
+            >
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 rounded-lg overflow-hidden">
                 {EDUCATION.map((education, index) => (
                   <Education key={index} education={education} />
                 ))}
               </div>
             </Section>
-            <Section title="Skills" className="left-point left-line pb-8">
-              <div className="flex gap-2 rounded-lg overflow-hidden">
+            <Section title="Skills" className="sm:left-point sm:left-line pb-8">
+              <div className="flex flex-col xl:flex-row gap-2 rounded-lg overflow-hidden">
                 {SKILLS.map((skills, index) => (
                   <Skill key={index} skills={skills} />
                 ))}
               </div>
             </Section>
-            <Section title="Latest Projects" className="left-point">
-              <div className="grid grid-cols-2 gap-2 rounded-lg overflow-hidden">
+            <Section title="Latest Projects" className="sm:left-point">
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 rounded-lg overflow-hidden">
                 {PROJECTS.map((project, index) => (
                   <Project key={index} project={project} />
                 ))}

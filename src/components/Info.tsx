@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { IoIosMail, IoMdPin } from "react-icons/io";
+import { HiMail, HiOutlineMap } from "react-icons/hi";
 
 interface Info {
   icon: ReactNode;
@@ -9,12 +9,12 @@ interface Info {
 
 const INFO: Info[] = [
   {
-    icon: <IoIosMail />,
+    icon: <HiMail />,
     title: "Email",
     element: <a href="mailto:dima.ja06@gmail.com">dima.ja06@gmail.com</a>,
   },
   {
-    icon: <IoMdPin />,
+    icon: <HiOutlineMap />,
     title: "Address",
     element: <span>Minsk, Belarus</span>,
   },
