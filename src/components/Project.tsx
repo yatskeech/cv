@@ -93,8 +93,11 @@ function Project({ project }: { project: ProjectType }) {
           </p>
         </div>
         <div className="mt-auto py-6 flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <span className="text-xs px-4 py-1 rounded-full border border-secondary-light text-gray-light hover:bg-secondary-light hover:text-secondary-dark transition-colors">
+          {project.technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="text-xs px-4 py-1 rounded-full border border-secondary-light text-gray-light hover:bg-secondary-light hover:text-secondary-dark transition-colors"
+            >
               {tech}
             </span>
           ))}
