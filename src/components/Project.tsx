@@ -8,6 +8,7 @@ interface ProjectType {
   src: string;
   title: string;
   description: string;
+  technologies: string[];
   urls: {
     deploy: string;
     code: string;
@@ -20,6 +21,7 @@ export const PROJECTS: ProjectType[] = [
     title: "Book App",
     description:
       "The project is built using pure JavaScript, focusing on modular components and views to ensure a maintainable and scalable codebase.",
+    technologies: ["HTML", "CSS", "JavaScript", "Rollup", "ESLint", "Prettier"],
     urls: {
       deploy: "",
       code: "",
@@ -30,6 +32,13 @@ export const PROJECTS: ProjectType[] = [
     title: "TODO List",
     description:
       "The project is built using pure JavaScript, focusing on modular components and views to ensure a maintainable and scalable codebase.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
     urls: {
       deploy: "",
       code: "",
@@ -40,6 +49,13 @@ export const PROJECTS: ProjectType[] = [
     title: "Personal Journal",
     description:
       "PersonalJournal is a React app for creating, editing, and managing journal entries with local storage support.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Vite",
+      "CSS Module",
+      "Local Storage",
+    ],
     urls: {
       deploy: "",
       code: "",
@@ -50,6 +66,14 @@ export const PROJECTS: ProjectType[] = [
     title: "Notes",
     description:
       "A modern, feature-rich note-taking application built with React, Tailwind CSS, and JSON Server, offering seamless note creation, management, and organization.",
+    technologies: [
+      "React",
+      "Typescript",
+      "React Router",
+      "Tailwind CSS",
+      "JSON Server",
+      "Zod",
+    ],
     urls: {
       deploy: "",
       code: "",
@@ -61,25 +85,34 @@ function Project({ project }: { project: ProjectType }) {
   return (
     <div className="flex flex-col">
       <video src={project.src} autoPlay muted loop />
-      <div className="flex-grow flex flex-col gap-4 p-4 bg-gray-darkest hover:bg-gray-darkest/50 transition-colors">
+      <div className="flex-grow flex flex-col p-4 bg-gray-darkest hover:bg-gray-darkest/50 transition-colors">
         <div>
           <h3 className="text-lg">{project.title}</h3>
           <p className="text-sm font-light text-gray-light">
             {project.description}
           </p>
         </div>
-        <div className="mt-auto flex gap-2">
+        <div className="mt-auto py-6 flex flex-wrap gap-2">
+          {project.technologies.map((tech) => (
+            <span className="text-xs px-4 py-1 rounded-full border border-secondary-light text-gray-light hover:bg-secondary-light hover:text-secondary-dark transition-colors">
+              {tech}
+            </span>
+          ))}
+        </div>
+        <div className="flex gap-2">
           <a
             href={project.urls.code}
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-dark text-secondary-light hover:text-secondary-dark hover:bg-secondary-light transition-all"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-dark text-secondary-light hover:text-secondary-dark hover:bg-secondary-light transition-all"
           >
             <HiCode />
+            <span className="text-sm">Code</span>
           </a>
           <a
             href={project.urls.code}
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-dark text-secondary-light hover:text-secondary-dark hover:bg-secondary-light transition-all"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-dark text-secondary-light hover:text-secondary-dark hover:bg-secondary-light transition-all"
           >
             <HiLink />
+            <span className="text-sm">View</span>
           </a>
         </div>
       </div>
