@@ -11,7 +11,14 @@ const INFO: Info[] = [
   {
     icon: <HiMail />,
     title: "Email",
-    element: <a href="mailto:dima.ja06@gmail.com">dima.ja06@gmail.com</a>,
+    element: (
+      <a
+        href="mailto:dima.ja06@gmail.com"
+        className="hover:text-secondary-light transition-all"
+      >
+        dima.ja06@gmail.com
+      </a>
+    ),
   },
   {
     icon: <HiOutlineMap />,

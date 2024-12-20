@@ -61,7 +61,7 @@ function Project({ project }: { project: ProjectType }) {
   return (
     <div className="flex flex-col">
       <video src={project.src} autoPlay muted loop />
-      <div className="flex-grow flex flex-col gap-4 p-4 bg-gray-darkest">
+      <div className="flex-grow flex flex-col gap-4 p-4 bg-gray-darkest hover:bg-gray-darkest/50 transition-colors">
         <div>
           <h3 className="text-lg">{project.title}</h3>
           <p className="text-sm font-light text-gray-light">
@@ -71,15 +71,15 @@ function Project({ project }: { project: ProjectType }) {
         <div className="mt-auto flex gap-2">
           <a
             href={project.urls.code}
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-dark"
+            className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-dark text-secondary-light hover:text-secondary-dark hover:bg-secondary-light transition-all"
           >
-            <HiCode className="text-secondary-light" />
+            <HiCode />
           </a>
           <a
             href={project.urls.code}
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-dark"
+            className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary-dark text-secondary-light hover:text-secondary-dark hover:bg-secondary-light transition-all"
           >
-            <HiLink className="text-secondary-light" />
+            <HiLink />
           </a>
         </div>
       </div>

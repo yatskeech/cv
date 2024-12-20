@@ -6,23 +6,19 @@ export const SKILLS: string[][] = [
 ];
 
 function Skill({ skills }: { skills: string[] }) {
-  if (skills.length == 1) {
-    return (
-      <div className="flex-grow p-4 flex items-center justify-center text-secondary-light bg-gray-darkest">
-        {skills[0]}
-      </div>
-    );
-  }
-
   return (
-    <div className="flex-grow p-4 flex items-center justify-center text-secondary-light bg-gray-darkest">
-      <ul className="list-disc">
-        {skills.map((skill, index) => (
-          <li key={index} className="">
-            {skill}
-          </li>
-        ))}
-      </ul>
+    <div className="flex-grow p-4 flex items-center justify-center text-secondary-light bg-gray-darkest hover:bg-gray-darkest/50 transition-colors">
+      {skills.length == 1 ? (
+        skills[0]
+      ) : (
+        <ul className="list-disc">
+          {skills.map((skill, index) => (
+            <li key={index} className="">
+              {skill}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

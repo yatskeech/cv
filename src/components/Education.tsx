@@ -52,7 +52,7 @@ export const EDUCATION: EducationType[] = [
 
 function Education({ education }: { education: EducationType }) {
   return (
-    <div className="bg-gray-darkest p-4 flex flex-col gap-2">
+    <div className="bg-gray-darkest p-4 flex flex-col gap-2 hover:bg-gray-darkest/50 transition-colors">
       <div className="flex gap-4 items-center">
         <div className="w-12 h-12">{education.icon}</div>
         <span className="text-sm text-gray-lightest leading-tight">

@@ -41,7 +41,12 @@ function Socials() {
             <span className="text-xs text-gray-light leading-none">
               {title}
             </span>
-            <a href={href}>{username}</a>
+            <a
+              href={href}
+              className="hover:text-secondary-light transition-all"
+            >
+              {username}
+            </a>
           </div>
         </div>
       ))}
