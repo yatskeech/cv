@@ -26,12 +26,12 @@ function App() {
           </div>
           <div className="px-4 sm:px-12 py-8">
             <Section
-              title="Education"
+              title="Latest Projects"
               className="sm:left-point sm:left-line pb-8"
             >
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 rounded-lg overflow-hidden">
-                {EDUCATION.map((education, index) => (
-                  <Education key={index} education={education} />
+                {PROJECTS.map((project, index) => (
+                  <Project key={index} project={project} />
                 ))}
               </div>
             </Section>
@@ -42,10 +42,10 @@ function App() {
                 ))}
               </div>
             </Section>
-            <Section title="Latest Projects" className="sm:left-point">
+            <Section title="Education" className="sm:left-point">
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 rounded-lg overflow-hidden">
-                {PROJECTS.map((project, index) => (
-                  <Project key={index} project={project} />
+                {EDUCATION.map((education, index) => (
+                  <Education key={index} education={education} />
                 ))}
               </div>
             </Section>
