@@ -20,11 +20,11 @@ export const PROJECTS: ProjectType[] = [
     src: book,
     title: "Book App",
     description:
-      "The project is built using pure JavaScript, focusing on modular components and views to ensure a maintainable and scalable codebase.",
+      "The Book Application is a SPA that enables users to search for books, save favorites, and navigate results with pagination. Built with pure JavaScript, it features a modular design for scalability and maintainability.",
     technologies: ["HTML", "CSS", "JavaScript", "Rollup", "ESLint", "Prettier"],
     urls: {
-      deploy: "",
-      code: "",
+      deploy: "https://yatskeech.github.io/book-app/",
+      code: "https://github.com/yatskeech/book-app",
     },
   },
   {
@@ -40,8 +40,8 @@ export const PROJECTS: ProjectType[] = [
       "Framer Motion",
     ],
     urls: {
-      deploy: "",
-      code: "",
+      deploy: "https://yatskeech.github.io/todo-list/",
+      code: "https://github.com/yatskeech/todo-list",
     },
   },
   {
@@ -57,8 +57,8 @@ export const PROJECTS: ProjectType[] = [
       "Local Storage",
     ],
     urls: {
-      deploy: "",
-      code: "",
+      deploy: "https://yatskeech.github.io/personal-journal/",
+      code: "https://github.com/yatskeech/personal-journal",
     },
   },
   {
@@ -76,7 +76,7 @@ export const PROJECTS: ProjectType[] = [
     ],
     urls: {
       deploy: "",
-      code: "",
+      code: "https://github.com/yatskeech/notes",
     },
   },
 ];
@@ -111,7 +111,7 @@ function Project({ project }: { project: ProjectType }) {
             <span className="text-sm">Code</span>
           </a>
           <a
-            href={project.urls.code}
+            href={project.urls.deploy}
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-dark text-secondary-light hover:text-secondary-dark hover:bg-secondary-light transition-all"
           >
             <HiLink />
