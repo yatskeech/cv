@@ -87,7 +87,7 @@ function Project({ project }: { project: ProjectType }) {
 
   return (
     <div className="flex flex-col">
-      <div className="h-48 pointer-events-none flex justify-center items-center relative bg-secondary-darker">
+      <div className="pointer-events-none flex justify-center items-center relative bg-secondary-darker">
         {loading && (
           <div className="rounded-md h-8 w-8 border-4 border-secondary-light animate-spin absolute" />
         )}
