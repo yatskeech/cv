@@ -36,9 +36,9 @@ function App() {
               </div>
             </Section>
             <Section title="Skills" className="sm:left-point sm:left-line pb-8">
-              <div className="flex flex-col xl:flex-row gap-2 rounded-lg overflow-hidden">
-                {SKILLS.map((skills, index) => (
-                  <Skill key={index} skills={skills} />
+              <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-1 rounded-lg overflow-hidden">
+                {SKILLS.map((skill, index) => (
+                  <Skill key={index} skill={skill} />
                 ))}
               </div>
             </Section>
