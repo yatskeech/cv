@@ -17,31 +17,21 @@ interface ProjectType {
 
 export const PROJECTS: ProjectType[] = [
   {
-    src: book,
-    title: "Book App",
+    src: notes,
+    title: "Notes",
     description:
-      "The Book Application is a SPA that enables users to search for books, save favorites, and navigate results with pagination. Built with pure JavaScript, it features a modular design for scalability and maintainability.",
-    technologies: ["HTML", "CSS", "JavaScript", "Rollup", "ESLint", "Prettier"],
-    urls: {
-      deploy: "https://yatskeech.github.io/book-app/",
-      code: "https://github.com/yatskeech/book-app",
-    },
-  },
-  {
-    src: todo,
-    title: "TODO List",
-    description:
-      "The project is built using pure JavaScript, focusing on modular components and views to ensure a maintainable and scalable codebase.",
+      "A modern, feature-rich note-taking application built with React, Tailwind CSS, and JSON Server, offering seamless note creation, management, and organization.",
     technologies: [
       "React",
-      "JavaScript",
-      "Vite",
+      "Typescript",
+      "React Router",
       "Tailwind CSS",
-      "Framer Motion",
+      "JSON Server",
+      "Zod",
     ],
     urls: {
-      deploy: "https://yatskeech.github.io/todo-list/",
-      code: "https://github.com/yatskeech/todo-list",
+      deploy: "",
+      code: "https://github.com/yatskeech/notes",
     },
   },
   {
@@ -62,21 +52,31 @@ export const PROJECTS: ProjectType[] = [
     },
   },
   {
-    src: notes,
-    title: "Notes",
+    src: todo,
+    title: "TODO List",
     description:
-      "A modern, feature-rich note-taking application built with React, Tailwind CSS, and JSON Server, offering seamless note creation, management, and organization.",
+      "The project is built using pure JavaScript, focusing on modular components and views to ensure a maintainable and scalable codebase.",
     technologies: [
       "React",
-      "Typescript",
-      "React Router",
+      "JavaScript",
+      "Vite",
       "Tailwind CSS",
-      "JSON Server",
-      "Zod",
+      "Framer Motion",
     ],
     urls: {
-      deploy: "",
-      code: "https://github.com/yatskeech/notes",
+      deploy: "https://yatskeech.github.io/todo-list/",
+      code: "https://github.com/yatskeech/todo-list",
+    },
+  },
+  {
+    src: book,
+    title: "Book App",
+    description:
+      "The Book Application is a SPA that enables users to search for books, save favorites, and navigate results with pagination. Built with pure JavaScript, it features a modular design for scalability and maintainability.",
+    technologies: ["HTML", "CSS", "JavaScript", "Rollup", "ESLint", "Prettier"],
+    urls: {
+      deploy: "https://yatskeech.github.io/book-app/",
+      code: "https://github.com/yatskeech/book-app",
     },
   },
 ];
