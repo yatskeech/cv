@@ -31,7 +31,7 @@ export const PROJECTS: ProjectType[] = [
       "Zod",
     ],
     urls: {
-      deploy: "",
+      deploy: "https://yatskeech.github.io/notes/",
       code: "https://github.com/yatskeech/notes",
     },
   },
