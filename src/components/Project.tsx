@@ -55,7 +55,7 @@ export const PROJECTS: ProjectType[] = [
     src: todo,
     title: "TODO List",
     description:
-      "The project is built using pure JavaScript, focusing on modular components and views to ensure a maintainable and scalable codebase.",
+      "TODO List is a task management application built with React, Tailwind CSS, and Vite, offering a modern and intuitive interface for creating, editing, and organizing tasks.",
     technologies: [
       "React",
       "JavaScript",
