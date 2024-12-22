@@ -84,7 +84,20 @@ export const PROJECTS: ProjectType[] = [
 function Project({ project }: { project: ProjectType }) {
   return (
     <div className="flex flex-col">
-      <video src={project.src} autoPlay muted loop />
+      <div className="pointer-events-none">
+        <video
+          src={project.src}
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
+          onTouchStart={(e) => e.preventDefault()}
+          onClick={(e) => e.preventDefault()}
+          onDoubleClick={(e) => e.preventDefault()}
+          className="pointer-events-none"
+        />
+      </div>
       <div className="flex-grow flex flex-col p-4 bg-gray-darkest hover:bg-gray-darkest/50 transition-colors">
         <div>
           <h3 className="text-lg">{project.title}</h3>
