@@ -3,6 +3,7 @@ import journal from "/public/journal.mp4";
 import notes from "/public/notes.mp4";
 import todo from "/public/todo.mp4";
 import { HiCode, HiLink } from "react-icons/hi";
+import { useState } from "react";
 
 interface ProjectType {
   src: string;
@@ -82,20 +83,22 @@ export const PROJECTS: ProjectType[] = [
 ];
 
 function Project({ project }: { project: ProjectType }) {
+  const [loading, setLoading] = useState(true);
+
   return (
     <div className="flex flex-col">
-      <div className="pointer-events-none">
+      <div className="h-48 pointer-events-none flex justify-center items-center relative bg-secondary-darker">
+        {loading && (
+          <div className="rounded-md h-8 w-8 border-4 border-secondary-light animate-spin absolute" />
+        )}
         <video
           src={project.src}
           autoPlay
           muted
           loop
           playsInline
-          controls={false}
-          onTouchStart={(e) => e.preventDefault()}
-          onClick={(e) => e.preventDefault()}
-          onDoubleClick={(e) => e.preventDefault()}
-          className="pointer-events-none"
+          onCanPlay={() => setLoading(false)}
+          className="min-h-24"
         />
       </div>
       <div className="flex-grow flex flex-col p-4 bg-gray-darkest hover:bg-gray-darkest/50 transition-colors">
